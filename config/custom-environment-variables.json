@@ -2,5 +2,6 @@
     "mongoURI": "mongoURI",
     "jwtSecret": "jwtSecret",
     "reCaptchaSecret": "reCaptchaSecret",
-    "reCaptchaClient": "reCaptchaClient"
+    "reCaptchaClient": "reCaptchaClient",
+    "gitSecret": "gitSecret"
 }

@@ -13,7 +13,10 @@ const MsgSchema = new mongoose.Schema({
     },
     token: {
         type: String
+    },
+    from: {
+        type: String
     }
 });
 
-module.exports = Message = mongoose.model("post", MsgSchema);
+module.exports = Message = mongoose.model("msg_noSecret", MsgSchema);
