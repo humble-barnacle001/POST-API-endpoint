@@ -20,6 +20,10 @@ router.get("/", async (req, res) => {
  */
 router.post("/", async (req, res) => {
     const { message } = req.body;
+    message = JSON.stringify(message);
+    if (!message) {
+        return res.status(400).send("Empty message");
+    }
     try {
         const payload = {
             message: message,
@@ -30,7 +34,7 @@ router.post("/", async (req, res) => {
         });
         const newPost = new Message({
             message: message,
-            url: req.baseUrl,
+            url: req.headers.origin || req.headers.host,
             token: token
         });
         const post = await newPost.save();
