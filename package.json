@@ -5,8 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "NODE_ENV=production node server",
-        "server": "nodemon server",
-        "dev": "npm run server",
+        "dev": "nodemon server",
         "test": "node server",
         "setup": "npm install"
     },

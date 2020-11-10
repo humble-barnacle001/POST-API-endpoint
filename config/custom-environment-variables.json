@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongoURI",
-    "jwtSecret": "jwtSecret"
+    "jwtSecret": "jwtSecret",
+    "reCaptchaSecret": "reCaptchaSecret",
+    "reCaptchaClient": "reCaptchaClient"
 }
