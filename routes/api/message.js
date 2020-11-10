@@ -23,7 +23,6 @@ router.post("/", async (req, res) => {
     if (!message) {
         return res.status(400).send("Empty message");
     }
-    message = JSON.stringify(message);
     try {
         const payload = {
             message: message,
