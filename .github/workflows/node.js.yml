@@ -17,6 +17,11 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
+    env:
+        mongoURI: ${{ secrets.MONGOURI }}
+        jwtSecret: ${{ secrets.JWTSECRET }}
+        reCaptchaSecret: ${{ secrets.RECAPTCHASECRET }}
+        gitSecret: ${{ secrets.GITSECRET }}
 
     steps:
     - uses: actions/checkout@v2
@@ -26,9 +31,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-      env:
-        mongoURI: ${{secrets.MONGOURI}}
-        jwtSecret: ${{secrets.JWTSECRET}}
-        reCaptchaSecret: ${{secrets.RECAPTCHASECRET}}
-        gitSecret: ${{secrets.GITSECRET}}
     - run: npm test
