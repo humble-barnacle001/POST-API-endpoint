@@ -20,10 +20,10 @@ router.get("/", async (req, res) => {
  */
 router.post("/", async (req, res) => {
     const { message } = req.body;
-    message = JSON.stringify(message);
     if (!message) {
         return res.status(400).send("Empty message");
     }
+    message = JSON.stringify(message);
     try {
         const payload = {
             message: message,
