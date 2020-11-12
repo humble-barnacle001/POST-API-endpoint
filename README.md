@@ -1,4 +1,4 @@
-# social-connector
+# POST API endpoint
 
 [![Dependency status](https://david-dm.org/humble-barnacle001/POST-API-endpoint/status.svg)](https://david-dm.org/humble-barnacle001/POST-API-endpoint) [![devDependencies status](https://david-dm.org/humble-barnacle001/POST-API-endpoint/dev-status.svg)](https://david-dm.org/humble-barnacle001/POST-API-endpoint?type=dev)
 
